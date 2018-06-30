@@ -5,6 +5,17 @@ y1 = 2*x + 1
 y2 = x**2
 plt.figure()
 plt.plot(x,y1,color = 'red',linewidth = 1.0, linestyle = '--')
+#第一个参数是号码，第二个是长宽尺寸
 plt.figure(num = 3, figsize = (8,5))
 plt.plot(x,y2)
 plt.show()
+
+
+
+#label
+plt.xlim((-1,2))
+plt.xlabel('something')
+plt.xticks(plt.linspace(-2,5,7))
+
+## r' '正则表达式， $...$将中间的英文字母表示为更加好看的样子，里面不能有空格，所以必须转义，alpha也必须转义才能显示其数学表达式
+plt.yticks([-1, 0, 1], [r'$not\ bad$',r'$bad\ \alpha$', r'$good$'])
